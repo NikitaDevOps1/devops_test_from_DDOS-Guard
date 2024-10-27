@@ -38,12 +38,14 @@
 5. ansible/first_VM/first_auto_ansible.sh и ansible/second_VM/second_auto_ansible.sh измените строки "ansible_user=user ansible_password=pass ansible_become_method=su/sudo ansible_become_user=root ansible_become_password=pass" в соответствии со своими данными
 
 Как все изменения были проведены можно начинать развертывание:
-1. 
-    - cd ansible/first_VM/
-    - ./first_auto_ansible.sh 
+1.
 
-2. 
-    - cd ansible/second_VM/ 
-    - ./second_auto_ansible.sh
+	- cd ansible/first_VM/
+	- ./first_auto_ansible.sh 
+
+2.
+
+        - cd ansible/second_VM/ 
+    	- ./second_auto_ansible.sh
 
 Также небольшое пояснение по поводу плейбука ansible/second_VM/second_setting.yml - развертывание докер контейнеров проходит через shell, потому что получая ошибки я нашел такую информацию: "Ошибка KeyError: 'ContainerConfig' при запуске Docker-compose в 2024 году может возникать из-за использования устаревшей версии. Вместо неё нужно использовать команду «docker compose»", а как сделать это в модуле docker_compose в ансибл я не нашел :(
