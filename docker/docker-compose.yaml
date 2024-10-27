@@ -4,7 +4,7 @@ services:
   prometheus:
     image: prom/prometheus:latest
     volumes:
-      - ./prometheus:/etc/prometheus/
+      - ./prometheus:/etc/prometheus/:ro
     container_name: prometheus
     hostname: prometheus
     command:
