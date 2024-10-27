@@ -51,12 +51,6 @@
         state: latest
         update_cache: true
 
-    - name: Add user to the Docker group
-      user:
-        name: user
-        groups: docker
-        append: yes
-
     # Containers up
     - name: Copy directory for docker
       copy: 
