@@ -1,4 +1,5 @@
 Проект настраивает 2 сервера Debian 12
+
     на первом сервере:
         - добавление переменной $PATH для суперпользователя;
         - prometheus-node-exporter, mariadb, mysqld_exporter + фаерволл (nftables). 
@@ -6,6 +7,7 @@
         - настройка nftables: закрыты все порты, кроме ssh, prometheus-node-exporter, mariadb, mysqld_exporter. 
           Список открытых портов должен задаваться в виде переменных в ansible.
           Также настройка базы mariadb для корректной работы prometheus-mysqld-exporter
+	  
     на втором сервере:
         - добавление переменной $PATH для суперпользователя
         - развертывание docker + docker compose, prometheus и grafana. Файлы конфигураций должны находиться на хосте и монтироваться в контейнеры в режиме ro.
