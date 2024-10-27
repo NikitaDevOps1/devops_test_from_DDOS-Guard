@@ -2,7 +2,6 @@
 - hosts: second 
   gather_facts: True
   become: True
-  vars:
 
   tasks:
     # For root $PATH
